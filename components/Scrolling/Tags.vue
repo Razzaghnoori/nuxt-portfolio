@@ -1,9 +1,13 @@
 <script setup>
-let { data: tags, pending, error } = await useFetch("/api/skills");
+let {
+  data: tags,
+  pending,
+  error,
+} = await useFetch("/api/skills", { lazy: true });
 </script>
 
 <template>
-  <div class="tags">
+  <div v-if="!pending && !error" class="tags">
     <div class="tags__inner">
       <Tag v-for="tag in tags">{{ tag.name }}</Tag>
       <Tag v-for="tag in tags">{{ tag.name }}</Tag>
