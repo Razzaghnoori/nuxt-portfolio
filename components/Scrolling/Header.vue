@@ -1,8 +1,14 @@
 <template>
   <div class="header-taimer">
     <div class="header-container">
-      <div class="avatar">
-        <img src="assets/images/profile.png" alt="User Avatar" />
+      <ScrollingAvatar />
+      <div class="header-info">
+        <h1>Hi, I'm <strong>James</strong></h1>
+        <p>
+          I’m a Full Stack Engineer with over 5 years of professional
+          experience, proficient in a wide range of tech stacks. Take a moment
+          to explore my expertise below!
+        </p>
       </div>
     </div>
   </div>
@@ -17,32 +23,37 @@
   width: 100vw;
   position: sticky;
   bottom: 0;
-}
-.avatar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
   display: flex;
-  align-items: end;
-  height: 90%;
-  max-height: 100%;
-  width: auto;
-  font-size: 3em;
-  color: #fff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  animation: avatar-shrink linear forwards;
-  transform-origin: bottom;
-  animation-timeline: view();
+  justify-content: center;
+  align-items: center;
+}
 
-  img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+.header-info {
+  @apply flex flex-col gap-2 text-white font-bold max-w-lg m-4;
+  position: sticky;
+  top: 0;
+  right: 0;
+
+  animation: header-info-animation linear forwards;
+  animation-timeline: view(20% 60%);
+
+  h1 {
+    @apply text-orange-500 uppercase;
+    font-size: 4rem;
+    font-weight: bolder;
+
+    strong {
+      @apply p-2 bg-orange-500 text-white;
+    }
   }
 }
 
-@keyframes avatar-shrink {
+@keyframes header-info-animation {
   0% {
+    scale: 0.8;
+    opacity: 0;
+  }
+  5% {
     scale: 1;
     opacity: 1;
   }
@@ -50,13 +61,9 @@
     scale: 1.1;
     opacity: 1;
   }
-  90% {
-    scale: 0.5;
-    opacity: 1;
-  }
   100% {
     opacity: 0;
-    scale: 0.5;
+    scale: 1;
   }
 }
 </style>
