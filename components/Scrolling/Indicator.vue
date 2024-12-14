@@ -4,18 +4,13 @@
       <span class="mouse-scroll"></span>
     </span>
     <span>Scroll Down</span>
+    <small class="no-pressure-text">(if you want, no pressure)</small>
   </div>
 </template>
 
 <script setup></script>
 
 <style lang="scss" scoped>
-.scroll-text {
-  @apply text-gray-300 rounded-3xl p-2 font-mono fixed top-10;
-  border: 2px solid #cccccc67;
-  animation: typing;
-}
-
 .container_mouse {
   --color: rgba(122, 122, 124, 0.918);
   position: relative;
@@ -26,29 +21,37 @@
   text-transform: uppercase;
   padding-top: 2rem;
   cursor: pointer;
-}
 
-.container_mouse .mouse-btn {
-  margin: 10px auto;
-  width: 40px;
-  height: 80px;
-  border: 4px solid var(--color);
-  border-radius: 30px;
-  display: flex;
-}
+  .mouse-btn {
+    margin: 10px auto;
+    width: 40px;
+    height: 80px;
+    border: 4px solid var(--color);
+    border-radius: 30px;
+    display: flex;
 
-.container_mouse .mouse-btn .mouse-scroll {
-  display: block;
-  width: 20px;
-  height: 20px;
-  background: linear-gradient(
-    170deg,
-    rgba(122, 122, 124, 0.918),
-    rgb(123, 124, 124)
-  );
-  border-radius: 50%;
-  margin: auto;
-  animation: scrolling 1s linear infinite;
+    .mouse-scroll {
+      display: block;
+      width: 20px;
+      height: 20px;
+      background: linear-gradient(
+        170deg,
+        rgba(122, 122, 124, 0.918),
+        rgb(123, 124, 124)
+      );
+      border-radius: 50%;
+      margin: auto;
+      animation: scrolling 1s linear infinite;
+    }
+  }
+}
+.no-pressure-text {
+  @apply font-handwritten font-extralight text-sm lowercase block;
+  white-space: nowrap;
+  overflow: hidden;
+  opacity: 0;
+  animation: appear 3s forwards;
+  animation-delay: 2s;
 }
 
 @keyframes scrolling {
@@ -60,6 +63,15 @@
   100% {
     opacity: 1;
     transform: translateY(20px);
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
   }
 }
 </style>
