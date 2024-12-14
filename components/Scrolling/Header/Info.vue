@@ -1,6 +1,6 @@
 <template>
   <div class="header-info">
-    <h1>Hi, I'm <strong>James</strong></h1>
+    <h1>Hi, I'm <strong>Mohammad</strong></h1>
     <p>
       I’m a Full Stack Engineer with over 5 years of professional experience,
       proficient in a wide range of tech stacks. Take a moment to explore my
