@@ -1,10 +1,11 @@
 <template>
   <div class="header-taimer">
-    <ScrollingIndicator/>
+    <ScrollingIndicator />
     <div class="header-container">
       <ScrollingAvatar />
-      <ScrollingHeaderInfo/>
-    </div>1
+      <ScrollingHeaderInfo />
+    </div>
+    1
   </div>
 </template>
 
