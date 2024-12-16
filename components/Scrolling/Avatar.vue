@@ -1,6 +1,6 @@
 <template>
   <div class="avatar">
-    <img src="assets/images/profile.png" alt="User Avatar" />
+    <img src="/images/profile.avif" alt="Mohammad Razzaghnoori" />
   </div>
 </template>
 

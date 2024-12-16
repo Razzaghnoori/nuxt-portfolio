@@ -11,9 +11,12 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        handwritten: ['Schoolbell'],
+        handwritten: ["Schoolbell"],
       },
+    },
+    container: {
+      center: true,
     },
   },
   plugins: [],
-}
+};

@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-2 w-full gap-2 p-4">
+  <div class="grid grid-cols-2 items-center justify-items-center w-full gap-6 p-4">
     <slot name="left">
       <div class="default-col">Left Column</div>
     </slot>

@@ -1,21 +1,37 @@
 <template>
-  <div class="w-9/12 m-auto">
-    <div class="flex flex-col justify-center items-center m-10">
-      <ScrollingHeader />
-      <div class="w-full">
-        <ScrollingTags />
-        <ScrollingTags data-direction="right" />
-      </div>
-      <ColumnsTwo class="mt-6">
-        <template #left>
-          <Image
-            src="https://en.xmag.live/wp-content/uploads/2024/02/Victoria-De-Angelis-Emporio-Armani-SS24-05.jpg"
-          />
-        </template>
-        <template #right>
-          <TextBlock/>
-        </template>
-      </ColumnsTwo>
+  <div class="md:container flex flex-col justify-center items-center m-10">
+    <ScrollingHeader />
+    <div class="w-full">
+      <ScrollingTags />
+      <ScrollingTags data-direction="right" />
     </div>
+    <Experience />
   </div>
 </template>
+<script setup>
+useHead({
+  title: "Mohammad Razzaghnoori",
+  htmlAttrs: {
+    lang: "en",
+  },
+  link: [
+    {
+      rel: "image",
+      href: "/images/profile.avif",
+      sizes: "(max-width: 1000px)",
+      type: "image/avif",
+    },
+  ],
+  meta: [
+    { charset: "utf-8" },
+    {
+      name: "description",
+      content: "Mohammad Razzaghnoori's Portfolio created in Nuxt.js",
+    },
+    {
+      name: "viewport",
+      content: "width=device-width, initial-scale=1",
+    },
+  ],
+});
+</script>

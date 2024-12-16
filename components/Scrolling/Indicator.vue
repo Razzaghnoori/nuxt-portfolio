@@ -12,7 +12,7 @@
 
 <style lang="scss" scoped>
 .container_mouse {
-  --color: rgba(122, 122, 124, 0.918);
+  --color: rgba(178, 178, 180, 0.918);
   position: relative;
   bottom: 0%;
   text-align: center;

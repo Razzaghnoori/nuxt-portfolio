@@ -1,5 +1,5 @@
 <template>
-  <img :src="src" class="aspect-auto w-9/12 rounded-xl shadow-md" />
+  <img :src="src" :alt="alt" class="fancy-image" :loading="lazy ? 'lazy' : 'eager'" />
 </template>
 
 <script setup>
@@ -8,6 +8,48 @@ const props = defineProps({
     type: String,
     required: true,
   },
+  alt: {
+    type: String,
+    default: "An image showing Mohammad Razzaghnoori",
+  },
+  lazy: {
+    type: Boolean,
+    default: true,
+  },
 });
-
 </script>
+
+<style scoped>
+@keyframes fade-in-out {
+  from {
+    opacity: 0;
+    scale: 0.8;
+  }
+  30% {
+    opacity: 1;
+    scale: 1;
+  }
+  70% {
+    opacity: 1;
+    scale: 1;
+  }
+  to {
+    opacity: 0;
+    scale: 0.8;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .fade-in-out {
+    animation: fade-in-out ease-in-out;
+    animation-timeline: view();
+  }
+}
+
+.fancy-image {
+  @apply aspect-auto rounded-xl shadow-md fade-in-out;
+  max-height: 75vh;
+  object-fit: contain;
+  max-width: 95%;
+}
+</style>
