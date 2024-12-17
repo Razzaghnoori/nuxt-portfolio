@@ -5,7 +5,7 @@ export default defineEventHandler((event) => {
       company: { name: "Holocron", link: "https://holocron.it" },
       position: "Senior Full Stack Engineer",
       duration: "Jun 2023-Jun 2024",
-      image: "/images/holocron.jpg",
+      image: "/images/holocron.avif",
       tags: [],
       description:
         "I worked as a Senior Full Stack Software Engineer at Holocron in Pisa, Italy, from June 2023 to June 2024. During this time, I developed and launched four websites using diverse technologies like Laravel and Vue.js while collaborating with three different teams. I optimized more than seven microservices in an application to handle large volumes of data, ensuring robust performance and zero failures. I assumed the role of an English speaker and transitioned to communicating in Italian within four months. Additionally, I revitalized and optimized a five-year-old legacy project, exceeding client expectations and ensuring satisfaction.",
