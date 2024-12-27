@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   modules: ["@nuxt/image", "@nuxtjs/sitemap", "@nuxtjs/robots"],
   devtools: { enabled: true },
+  dev: process.env.NODE_ENV !== "production",
   postcss: {
     plugins: {
       tailwindcss: {},
