@@ -1,6 +1,6 @@
 <template>
   <div class="avatar">
-    <img src="/images/profile.avif" alt="Mohammad Razzaghnoori" />
+    <NuxtImg src="/images/profile.webp" alt="Mohammad Razzaghnoori" width="1000"/>
   </div>
 </template>
 

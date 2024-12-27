@@ -33,7 +33,9 @@ console.log(props.experience.image);
 </script>
 
 <style lang="scss" scoped>
-.grid-row-reversed {
-  direction: rtl;
+@media (min-width: 768px) {
+  .grid-row-reversed {
+    direction: rtl;
+  }
 }
 </style>

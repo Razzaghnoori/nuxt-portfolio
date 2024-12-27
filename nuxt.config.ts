@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
+  modules: ["@nuxt/image", "@nuxtjs/sitemap", "@nuxtjs/robots"],
   devtools: { enabled: true },
   postcss: {
     plugins: {
@@ -8,5 +9,22 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  css: ['~/assets/css/main.css'],
+  site: {
+    url: "https://razzaghnoori.com",
+    name: "Mohammad Razzaghnoori",
+  },
+  sitemap: {
+    minify: true,
+    routes: async () => {
+      const staticRoutes = ["/"];
+      return staticRoutes; // Add dynamic routes in case they exist in the future
+    },
+  },
+  robots: {
+    sitemap: "/sitemap.xml",
+  },
+  css: ["~/assets/css/main.css"],
+  router: {
+    trailingSlash: false,
+  },
 });

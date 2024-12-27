@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-2 items-center justify-items-center w-full gap-6 p-4">
+  <div class="two-cols">
     <slot name="left">
       <div class="default-col">Left Column</div>
     </slot>
@@ -18,5 +18,9 @@
   text-align: center;
   border: 1px dashed white;
   border-radius: 1rem;
+}
+
+.two-cols {
+  @apply flex flex-col items-center md:grid md:grid-cols-2 md:justify-items-center md:w-full gap-6 p-4;
 }
 </style>

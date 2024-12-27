@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="text-block-container">
     <small class="font-bold">{{ position }}</small>
     <a :href="link" target="_blank"
       ><h1>
@@ -26,8 +26,8 @@ const props = defineProps({
 </script>
 
 <style lang="scss" scoped>
-.container {
-  @apply flex flex-col items-start;
+.text-block-container {
+  @apply flex flex-col items-start mx-4 text-justify;
   h1 {
     @apply text-4xl font-bold uppercase text-orange-500 hover:text-orange-600;
     transition: all 0.1s;

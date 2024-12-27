@@ -16,10 +16,9 @@ useHead({
   },
   link: [
     {
-      rel: "image",
-      href: "/images/profile.avif",
-      sizes: "(max-width: 1000px)",
-      type: "image/avif",
+      rel: "preload",
+      as: "image/webp",
+      href: "/images/profile.webp",
     },
   ],
   meta: [
@@ -31,6 +30,31 @@ useHead({
     {
       name: "viewport",
       content: "width=device-width, initial-scale=1",
+    },
+    {
+      name: "keywords",
+      content:
+        "mohammad razzaghnoori, portfolio, nuxt.js, vue.js, fontend developer, full-stack developer, web developer",
+    },
+    {
+      name: "og:title",
+      content: "Mohammad Razzaghnoori",
+    },
+    {
+      name: "og:description",
+      content: "Mohammad Razzaghnoori's Portfolio created in Nuxt.js",
+    },
+    {
+      name: "og:image",
+      content: "/images/profile.webp",
+    },
+    {
+      name: "og:url",
+      content: "https://razzaghnoori.com",
+    },
+    {
+      name: "og:type",
+      content: "website",
     },
   ],
 });

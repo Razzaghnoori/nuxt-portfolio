@@ -1,5 +1,5 @@
 <template>
-  <img :src="src" :alt="alt" class="fancy-image" :loading="lazy ? 'lazy' : 'eager'" />
+  <NuxtImg :src="src" :alt="alt" class="fancy-image" :loading="lazy ? 'lazy' : 'eager'" />
 </template>
 
 <script setup>
@@ -51,5 +51,6 @@ const props = defineProps({
   max-height: 75vh;
   object-fit: contain;
   max-width: 95%;
+  max-height: 70vh;
 }
 </style>
