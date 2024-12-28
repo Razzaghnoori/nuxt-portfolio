@@ -20,6 +20,11 @@ useHead({
       as: "image/webp",
       href: "/images/profile.webp",
     },
+    {
+      rel: "icon",
+      href: "/images/favicon.webp",
+      type: "image/webp",
+    }
   ],
   meta: [
     { charset: "utf-8" },
