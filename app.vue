@@ -58,4 +58,19 @@ useHead({
     },
   ],
 });
+
+function isAnimationTimelineSupported() {
+  return (
+    CSS.supports("animation-timeline", "scroll()") ||
+    "animationTimeline" in document.body.style
+  );
+}
+
+onMounted(() => {
+  if (!isAnimationTimelineSupported()) {
+    alert(
+      "Many of the cool effects I've used here are not supported in your browser. Please use Chrome on Desktop for the best experience."
+    );
+  }
+});
 </script>
