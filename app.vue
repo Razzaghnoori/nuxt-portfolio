@@ -70,18 +70,4 @@ useHead({
     },
   ],
 });
-
-function isMobile() {
-  return /Android|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-    navigator.userAgent
-  );
-}
-
-onMounted(() => {
-  if (isMobile()) {
-    alert(
-      "Many of the cool effects I've used here are not supported in your browser. Please use Chrome on Desktop for the best experience."
-    );
-  }
-});
 </script>
