@@ -14,10 +14,5 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-@media (max-width: 768px) {
-  #__nuxt {
-    overflow-x: hidden;
-  }
+  margin: 1rem;
 }
