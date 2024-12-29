@@ -14,16 +14,17 @@
 <style lang="scss" scoped>
 .header-info {
   @apply flex flex-col gap-2 text-white font-bold max-w-lg m-4;
+  width: min(80vw, 100%);
   position: sticky;
   top: 0;
   right: 0;
+  padding: 3rem 0 5rem 0;
 
   animation: header-info-animation linear forwards;
   animation-timeline: view(20% 60%);
 
   h1 {
-    @apply text-orange-500 uppercase;
-    font-size: 4rem;
+    @apply text-orange-500 uppercase text-2xl sm:text-7xl leading-normal sm:leading-tight;
     font-weight: bolder;
 
     strong {
@@ -33,21 +34,15 @@
 }
 
 @keyframes header-info-animation {
-  0% {
-    scale: 0.8;
-    opacity: 0;
-  }
-  5% {
-    scale: 1;
-    opacity: 1;
-  }
   80% {
     scale: 1.1;
     opacity: 1;
+    filter: blur(0px);
   }
   100% {
     opacity: 0;
     scale: 1;
+    filter: blur(20px);
   }
 }
 </style>

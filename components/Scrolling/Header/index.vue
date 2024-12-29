@@ -5,7 +5,6 @@
       <ScrollingAvatar />
       <ScrollingHeaderInfo />
     </div>
-    1
   </div>
 </template>
 

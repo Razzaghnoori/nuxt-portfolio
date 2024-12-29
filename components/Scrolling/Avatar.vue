@@ -1,6 +1,10 @@
 <template>
   <div class="avatar">
-    <NuxtImg src="/images/profile.webp" alt="Mohammad Razzaghnoori" width="1000"/>
+    <NuxtImg
+      src="/images/profile.webp"
+      alt="Mohammad Razzaghnoori"
+      width="1000"
+    />
   </div>
 </template>
 
@@ -20,9 +24,12 @@
   color: #fff;
   z-index: 100;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  animation: avatar-shrink linear forwards;
-  transform-origin: bottom;
-  animation-timeline: view();
+  
+  @supports (animation-timeline: view()) {
+    animation: avatar-shrink linear forwards;
+    transform-origin: bottom;
+    animation-timeline: view();
+  }
 
   img {
     max-width: 100%;

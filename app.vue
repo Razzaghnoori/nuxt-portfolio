@@ -24,7 +24,14 @@ useHead({
       rel: "icon",
       href: "/images/favicon.webp",
       type: "image/webp",
-    }
+    },
+  ],
+  script: [
+    {
+      src: "https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js",
+      type: "text/javascript",
+      defer: true, // Ensures the script loads after the HTML is parsed
+    },
   ],
   meta: [
     { charset: "utf-8" },
@@ -64,15 +71,14 @@ useHead({
   ],
 });
 
-function isAnimationTimelineSupported() {
-  return (
-    CSS.supports("animation-timeline", "scroll()") ||
-    "animationTimeline" in document.body.style
+function isMobile() {
+  return /Android|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent
   );
 }
 
 onMounted(() => {
-  if (!isAnimationTimelineSupported()) {
+  if (isMobile()) {
     alert(
       "Many of the cool effects I've used here are not supported in your browser. Please use Chrome on Desktop for the best experience."
     );

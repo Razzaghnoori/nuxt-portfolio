@@ -1,5 +1,10 @@
 <template>
-  <NuxtImg :src="src" :alt="alt" class="fancy-image" :loading="lazy ? 'lazy' : 'eager'" />
+  <NuxtImg
+    :src="src"
+    :alt="alt"
+    class="fancy-image"
+    :loading="lazy ? 'lazy' : 'eager'"
+  />
 </template>
 
 <script setup>
@@ -39,11 +44,9 @@ const props = defineProps({
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .fade-in-out {
-    animation: fade-in-out ease-in-out;
-    animation-timeline: view();
-  }
+.fade-in-out {
+  animation: fade-in-out ease-in-out;
+  animation-timeline: view();
 }
 
 .fancy-image {

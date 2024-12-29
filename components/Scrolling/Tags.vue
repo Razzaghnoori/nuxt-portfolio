@@ -25,11 +25,8 @@ let {
   &__inner {
     @apply flex gap-3 justify-center flex-nowrap;
 
-    @media (prefers-reduced-motion: no-preference) {
-      animation: scrolling linear;
-      animation-timeline: view();
-      animation-range: normal;
-    }
+    animation: scrolling linear;
+    animation-timeline: view();
   }
 
   &[data-direction="right"] .tags__inner {
