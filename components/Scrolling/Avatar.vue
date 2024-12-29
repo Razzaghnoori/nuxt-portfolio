@@ -19,7 +19,6 @@
   align-items: end;
   height: 90%;
   max-height: 100%;
-  width: auto;
   font-size: 3em;
   color: #fff;
   z-index: 100;
@@ -33,6 +32,17 @@
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
+  }
+}
+
+@media (max-width: 768px) {
+  .avatar {
+    position: static;
+
+    img {
+      border-radius: 100%;
+      border: 2px dashed #fff;
+    }
   }
 }
 

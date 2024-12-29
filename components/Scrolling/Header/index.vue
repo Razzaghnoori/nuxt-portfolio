@@ -22,4 +22,11 @@
   justify-content: center;
   align-items: center;
 }
+
+@media (max-width: 768px) {
+  .header-container {
+    height: 140vh;
+    width: 90vw;
+  }
+}
 </style>
