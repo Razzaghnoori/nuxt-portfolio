@@ -1,7 +1,7 @@
 <template>
   <div class="md:container flex flex-col justify-center items-center m-10">
     <ScrollingHeader />
-    <div class="w-full">
+    <div class="w-11/12">
       <ScrollingTags />
       <ScrollingTags data-direction="right"/>
     </div>
