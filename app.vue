@@ -3,7 +3,7 @@
     <ScrollingHeader />
     <div class="w-full">
       <ScrollingTags />
-      <ScrollingTags data-direction="right" />
+      <ScrollingTags data-direction="right"/>
     </div>
     <Experience />
   </div>

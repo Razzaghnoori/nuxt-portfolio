@@ -20,10 +20,11 @@ let {
   @apply bg-neutral-950 p-3;
 
   width: 100%;
+  overflow-x: clip;
   mask: linear-gradient(90deg, transparent, white 35%, white 65%, transparent);
 
   &__inner {
-    @apply flex gap-3 justify-center flex-nowrap;
+    @apply flex gap-2 justify-center flex-nowrap;
 
     animation: scrolling linear;
     animation-timeline: view();
@@ -34,9 +35,20 @@ let {
     flex-direction: row-reverse;
   }
 }
+
+@media (max-width: 768px) {
+  .tags {
+    width: 100vw;
+
+    &__inner {
+      animation: scrolling 20s linear infinite;
+    }
+  }
+}
+
 @keyframes scrolling {
   to {
-    transform: translateX(calc(-20% - 0.5rem));
+    transform: translateX(calc(-50% - 0.25rem));
   }
 }
 </style>

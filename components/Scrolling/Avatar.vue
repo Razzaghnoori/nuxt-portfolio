@@ -3,7 +3,7 @@
     <NuxtImg
       src="/images/profile.webp"
       alt="Mohammad Razzaghnoori"
-      width="1000"
+      width="800"
     />
   </div>
 </template>
