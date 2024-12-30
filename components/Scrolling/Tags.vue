@@ -42,6 +42,10 @@ let {
 
     &__inner {
       animation: scrolling 20s linear infinite;
+
+      &:hover {
+        animation-play-state: paused;
+      }
     }
   }
 }
