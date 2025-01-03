@@ -16,12 +16,12 @@
         class="text-block bg-neutral-950 opacity-80 p-4 text-center text-nowrap"
       >
         <div class="flex justify-between w-full">
-          <small class="text-lg font-bold">{{
+          <small class="text-xs sm:text-lg lg:text-2xl font-bold">{{
             education.university.name
           }}</small>
-          <small class="text-lg font-bold">{{ education.duration }}</small>
+          <small class="text-xs sm:text-lg lg:text-2xl font-bold">{{ education.duration }}</small>
         </div>
-        <h3 class="text-4xl font-extrabold p-4 text-orange-500 p-0">
+        <h3 class="text-lg sm:text-2xl lg:text-4xl font-extrabold text-orange-500 p-0">
           {{ education.degree }}
         </h3>
       </div>
@@ -45,7 +45,7 @@ const props = defineProps({
 
 <style lang="scss" scoped>
 .card {
-  --card-width: clamp(300px, 80vw, 650px);
+  --card-width: clamp(300px, 45vw, 650px);
   --card-height: var(--card-width);
 
   width: var(--card-width);
