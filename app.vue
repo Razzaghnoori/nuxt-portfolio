@@ -1,11 +1,12 @@
 <template>
-  <div class="md:container flex flex-col justify-center items-center">
+  <div class="md:container flex flex-col justify-center items-center mb-20">
     <ScrollingHeader />
     <div class="w-full overflow-hidden sm:overflow-visible">
       <ScrollingTags />
       <ScrollingTags data-direction="right"/>
     </div>
     <Experience />
+    <Education />
   </div>
 </template>
 <script setup>

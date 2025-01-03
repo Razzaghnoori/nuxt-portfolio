@@ -21,6 +21,6 @@
 }
 
 .two-cols {
-  @apply flex flex-col items-center md:grid md:grid-cols-2 md:justify-items-center md:w-full gap-6 p-4;
+  @apply flex flex-col flex-wrap items-center lg:grid lg:grid-cols-2 lg:justify-items-center lg:w-full gap-6 p-4;
 }
 </style>
