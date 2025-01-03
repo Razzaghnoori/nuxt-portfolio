@@ -10,6 +10,8 @@
           :src="education.image"
           class="cover-image rounded-xl"
           :alt="`Mohammad Razzaghnoori Studying ${education.degree} at ${education.university.name}`"
+          width="650"
+          height="650"
         />
       </div>
       <div
@@ -19,9 +21,13 @@
           <small class="text-xs sm:text-lg lg:text-2xl font-bold">{{
             education.university.name
           }}</small>
-          <small class="text-xs sm:text-lg lg:text-2xl font-bold">{{ education.duration }}</small>
+          <small class="text-xs sm:text-lg lg:text-2xl font-bold">{{
+            education.duration
+          }}</small>
         </div>
-        <h3 class="text-lg sm:text-2xl lg:text-4xl font-extrabold text-orange-500 p-0">
+        <h3
+          class="text-lg sm:text-2xl lg:text-4xl font-extrabold text-orange-500 p-0"
+        >
           {{ education.degree }}
         </h3>
       </div>
@@ -29,6 +35,8 @@
         :src="education.university.image"
         class="character"
         :alt="`Mohammad Razzaghnoori Studying ${education.degree} at ${education.university.name}`"
+        width="650"
+        height="650"
       />
     </div>
   </a>

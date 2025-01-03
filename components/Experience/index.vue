@@ -1,9 +1,9 @@
 <template>
   <Section>
-    <div class="flex flex-col items-center">
+    <h2 class="flex flex-col items-center">
       <span class="font-bold">Professional</span>
       <span class="text-4xl font-bold">Experience</span>
-    </div>
+    </h2>
     <ExperienceBlock
       v-for="(experience, index) in experiences"
       :experience="experience"

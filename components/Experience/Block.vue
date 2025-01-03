@@ -4,6 +4,8 @@
       <Image
         :src="experience.image ?? 'https://placehold.co/600x400?text=No\nImage'"
         :alt="`Mohammad Razzaghnoori at ${experience.company.name}`"
+        width="600"
+        height="400"
       />
     </template>
     <template #right>
