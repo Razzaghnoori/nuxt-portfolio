@@ -2,6 +2,10 @@
 
 My personal portfolio written in Nuxt.
 
+## Live Demo
+Check out a live demo of my portfolio on:
+[razzaghnoori.com](https://www.razzaghnoori.com)
+
 ## Setup
 
 Make sure to install dependencies:
