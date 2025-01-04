@@ -58,9 +58,13 @@
     scale: 0.5;
     opacity: 1;
   }
-  100% {
+  99% {
     opacity: 0;
     scale: 0.6;
+  }
+  100% {
+    opacity: 0;
+    scale: 0;
   }
 }
 </style>

@@ -8,6 +8,7 @@
     <Experience />
     <Education />
   </div>
+  <Footer/>
 </template>
 <script setup>
 useHead({

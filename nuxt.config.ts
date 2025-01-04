@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     "@nuxtjs/sitemap",
     "@nuxtjs/robots",
     "@nuxtjs/google-fonts",
+    "@vesp/nuxt-fontawesome",
   ],
   devtools: { enabled: true },
   dev: process.env.NODE_ENV !== "production",
@@ -40,5 +41,10 @@ export default defineNuxtConfig({
     display: "swap",
     preload: true,
     text: "(if you want, no pressure)",
+  },
+  fontawesome: {
+    icons: {
+      brands: ['linkedin', 'github', 'instagram', 'twitter', 'stack-overflow'],
+    },
   },
 });
