@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <footer v-if="!error" class="footer">
     <div class="footer-container">
       <!-- Social Icons -->
       <div class="social-icons">
@@ -39,7 +39,7 @@ const { socials, email, phone, address } = data?.value || {};
 
 <style scoped lang="scss">
 .footer {
-  @apply flex items-center justify-center bg-neutral-100 text-neutral-950 md:p-8 text-xl;
+  @apply flex items-center justify-center bg-neutral-100 text-neutral-950 md:p-8;
   width: 94vw;
   min-height: 20vh;
   border-radius: 3rem 3rem 0 0;
