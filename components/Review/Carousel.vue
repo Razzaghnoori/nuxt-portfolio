@@ -209,11 +209,11 @@ watch(() => props.itemCount, () => {
 }
 
 .progress-dots {
-  @apply flex justify-center gap-2;
+  @apply flex justify-center gap-3;
 }
 
 .dot {
-  @apply w-3 h-3 rounded-full bg-gray-400 transition-all duration-500;
+  @apply w-4 h-4 rounded-full bg-gray-400 transition-all duration-500;
 
   &.active {
     @apply bg-gray-800 scale-125 w-8;
