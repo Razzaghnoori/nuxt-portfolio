@@ -5,11 +5,13 @@
       :style="transformStyle"
     >
       <div class="review-header">
-        <img 
+        <NuxtImg
           :src="review.avatar" 
           :alt="review.author"
           class="review-avatar"
-        >
+          width="80"
+          height="80"
+        />
         <div class="review-author">
           <h3 class="author-name">{{ review.author }}</h3>
           <p class="author-role">{{ review.role }}</p>
