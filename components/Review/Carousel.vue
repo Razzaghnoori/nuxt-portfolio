@@ -4,6 +4,8 @@
     ref="container"
     @mousemove="handleMouseMove"
     @mouseleave="handleMouseLeave"
+    tabindex="0"
+    @keydown="handleKeydown"
   >
     <div class="carousel-track">
       <div class="carousel-wrapper" ref="scrollContainer">
@@ -18,6 +20,7 @@
         direction="prev"
         :disabled="isAtStart"
         @click="scrollPrev"
+        aria-label="Previous review"
       />
       <div class="progress-dots">
         <button
@@ -26,19 +29,21 @@
           class="dot"
           :class="{ active: currentSlide === index }"
           @click="goToSlide(index)"
-        />
+          aria-label="Go to review"
+        ></button>
       </div>
       <NavigationButton
         direction="next"
         :disabled="isAtEnd"
         @click="scrollNext"
+        aria-label="Next review"
       />
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, computed, onMounted, watch } from 'vue'
+import { ref, computed, onMounted, onUnmounted, watch } from 'vue'
 import NavigationButton from './NavigationButton.vue'
 
 const props = defineProps({
@@ -63,8 +68,8 @@ const transformStyle = computed(() => {
   }
 
   const { x, y } = mousePosition.value
-  const rotateX = (y - 0.5) * -7  // 3.5 degrees of rotation max
-  const rotateY = (x - 0.5) * 7  // 3.5 degrees of rotation max
+  const rotateX = (y - 0.5) * -6  // 3 degrees of rotation max
+  const rotateY = (x - 0.5) * 6  // 3 degrees of rotation max
 
   return {
     transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
@@ -122,11 +127,41 @@ const checkScrollPosition = () => {
   currentSlide.value = Math.round(scrollLeft / clientWidth)
 }
 
+const handleKeydown = (e) => {
+  switch (e.key) {
+    case 'ArrowLeft':
+      scrollPrev()
+      break
+    case 'ArrowRight':
+      scrollNext()
+      break
+  }
+}
+
+// Add global keyboard listener
+const handleGlobalKeydown = (e) => {
+  // Only handle keyboard events if the carousel is visible in viewport
+  if (!container.value) return
+  const rect = container.value.getBoundingClientRect()
+  const isVisible = rect.top < window.innerHeight && rect.bottom >= 0
+  
+  if (isVisible) {
+    handleKeydown(e)
+  }
+}
+
 onMounted(() => {
   if (scrollContainer.value) {
     scrollContainer.value.addEventListener('scroll', checkScrollPosition)
     checkScrollPosition()
   }
+  // Add global keyboard listener
+  window.addEventListener('keydown', handleGlobalKeydown)
+})
+
+onUnmounted(() => {
+  // Remove global keyboard listener
+  window.removeEventListener('keydown', handleGlobalKeydown)
 })
 
 watch(() => props.itemCount, () => {
@@ -136,7 +171,7 @@ watch(() => props.itemCount, () => {
 
 <style lang="scss" scoped>
 .carousel-container {
-  @apply flex flex-col items-center;
+  @apply flex flex-col items-center outline-none; // Add outline-none for focus state
 }
 
 .carousel-track {

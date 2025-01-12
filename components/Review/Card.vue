@@ -4,7 +4,7 @@
       class="card-content"
       :style="transformStyle"
     >
-      <div class="review-header">
+      <a :href="review.link" target="_blank" class="review-header">
         <NuxtImg
           :src="review.avatar" 
           :alt="review.author"
@@ -17,7 +17,7 @@
           <p class="author-role">{{ review.role }}</p>
           <p class="author-company">{{ review.company }}</p>
         </div>
-      </div>
+      </a>
       <div class="review-content">
         <p class="text-justify">"{{ review.content }}"</p>
       </div>

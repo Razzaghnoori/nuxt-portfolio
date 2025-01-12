@@ -3,7 +3,7 @@ export default defineEventHandler((event) => {
     name: "Mohammad Razzaghnoori",
     email: "razzaghnoori@gmail.com",
     phone: "(+49)1742593109",
-    address: ["Richard Wagner-Str 38a", "63069 Offenbach, Hessen, Germany"],
+    address: ["Richard Wagner-Str", "63069 Offenbach, Hessen, Germany"],
     socials: {
       linkedin: "https://www.linkedin.com/in/razzaghnoori",
       github: "https://github.com/Razzaghnoori",
