@@ -14,7 +14,7 @@
 .container_mouse {
   --color: rgba(178, 178, 180, 0.918);
   position: relative;
-  bottom: 0%;
+  bottom: 0;
   text-align: center;
   color: var(--color);
   font-weight: bold;

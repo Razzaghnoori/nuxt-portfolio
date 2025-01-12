@@ -1,4 +1,5 @@
 <template>
+  <DevBanner />
   <div class="md:container flex flex-col justify-center items-center mb-20">
     <ScrollingHeader />
     <div class="w-full overflow-hidden sm:overflow-visible">
@@ -12,8 +13,6 @@
   <Footer/>
 </template>
 <script setup>
-import Review from '~/components/Review/index.vue'
-
 useHead({
   title: "Mohammad Razzaghnoori",
   htmlAttrs: {
