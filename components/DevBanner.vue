@@ -5,7 +5,7 @@
         <div class="message">
           <span class="tech">Built with Nuxt 3</span>
           <span class="divider">•</span>
-          <span>Check out the
+          <span class="source-link-container">Check out the
             <a
               href="https://github.com/Razzaghnoori/nuxt-portfolio"
               target="_blank"
@@ -21,7 +21,7 @@
             aria-label="Show Lighthouse instructions"
           >
             Check Lighthouse Scores
-            <font-awesome :icon="['fas', 'gauge-high']" class="ml-2" />
+            <font-awesome :icon="['fas', 'gauge-high']" class="ml-3 text-xl" />
           </button>
         </div>
         <button
@@ -75,9 +75,9 @@ const showLighthouseInstructions = () => {
 
 <style lang="scss" scoped>
 .dev-banner {
-  @apply flex w-screen text-white z-50 bg-gradient-to-r from-indigo-600 via-indigo-900 
-  to-indigo-600 items-center justify-between border-b-4 border-indigo-500 text-base shadow-lg
-  relative;
+  @apply flex w-screen text-white z-50 bg-gradient-to-r from-indigo-800 via-purple-900 
+  to-indigo-800 items-center justify-between border-b-4 border-indigo-600 text-base shadow-xl
+  relative backdrop-blur-sm bg-opacity-95;
 }
 
 .banner-content {
@@ -89,7 +89,7 @@ const showLighthouseInstructions = () => {
 }
 
 .tech {
-  @apply font-bold text-white bg-indigo-700 px-4 py-1.5 rounded-md
+  @apply font-bold text-white bg-indigo-700 p-3 rounded-md
          shadow-sm hover:bg-indigo-600 transition-colors;
 }
 
@@ -97,18 +97,22 @@ const showLighthouseInstructions = () => {
   @apply text-indigo-400 font-bold hidden sm:block;
 }
 
+.source-link-container {
+  @apply flex items-center gap-4 flex-wrap justify-center;
+}
+
 .source-link {
-  @apply text-white decoration-wavy underline ml-1
+  @apply text-white decoration-wavy underline
          underline-offset-4 transition-colors font-medium;
 }
 
 .lighthouse {
-  @apply hidden sm:flex items-center bg-neutral-800 px-4 py-1.5 rounded-md
-         text-neutral-50 font-medium hover:bg-neutral-700 transition-colors;
+  @apply hidden sm:flex items-center bg-neutral-900 px-4 rounded-md p-3
+         text-neutral-50 font-medium hover:bg-neutral-800 transition-colors;
 }
 
 .dismiss-button {
-  @apply absolute right-4 top-1/2 -translate-y-1/2 p-4 
+  @apply absolute right-4 top-1/2 -translate-y-1/2 p-3
          text-indigo-300 hover:text-white transition-colors text-2xl;
 }
 
