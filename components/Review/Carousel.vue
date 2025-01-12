@@ -34,7 +34,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, watch } from 'vue'
+import { ref, computed, onMounted, watch } from 'vue'
 import NavigationButton from './NavigationButton.vue'
 
 const props = defineProps({
@@ -45,9 +45,11 @@ const props = defineProps({
 })
 
 const scrollContainer = ref(null)
-const isAtStart = ref(true)
-const isAtEnd = ref(false)
 const currentSlide = ref(0)
+
+// Simplified computed properties
+const isAtStart = computed(() => currentSlide.value === 0)
+const isAtEnd = computed(() => currentSlide.value === props.itemCount - 1)
 
 const goToSlide = (index) => {
   if (!scrollContainer.value) return
@@ -61,27 +63,23 @@ const goToSlide = (index) => {
 }
 
 const scrollNext = () => {
-  if (currentSlide.value < props.itemCount - 1) {
+  if (!isAtEnd.value) {
     goToSlide(currentSlide.value + 1)
   }
 }
 
 const scrollPrev = () => {
-  if (currentSlide.value > 0) {
+  if (!isAtStart.value) {
     goToSlide(currentSlide.value - 1)
   }
 }
 
 const checkScrollPosition = () => {
   if (!scrollContainer.value) return
-
-  const { scrollLeft, scrollWidth, clientWidth } = scrollContainer.value
-  isAtStart.value = scrollLeft <= 0
-  isAtEnd.value = scrollLeft >= scrollWidth - clientWidth - 1
-
+  
+  const { scrollLeft, clientWidth } = scrollContainer.value
   // Update current slide
-  const slideWidth = clientWidth
-  currentSlide.value = Math.round(scrollLeft / slideWidth)
+  currentSlide.value = Math.round(scrollLeft / clientWidth)
 }
 
 onMounted(() => {
