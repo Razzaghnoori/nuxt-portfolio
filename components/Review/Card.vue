@@ -1,5 +1,5 @@
 <template>
-  <div class="review-card">
+  <article class="review-card text-sm sm:text-base">
     <div class="review-header">
       <img 
         :src="review.avatar" 
@@ -13,9 +13,9 @@
       </div>
     </div>
     <div class="review-content">
-      <p>"{{ review.content }}"</p>
+      <p class="text-justify">"{{ review.content }}"</p>
     </div>
-  </div>
+  </article>
 </template>
 
 <script setup>
@@ -33,7 +33,7 @@ defineProps({
 }
 
 .review-header {
-  @apply flex items-center mb-6;
+  @apply flex flex-col sm:flex-row gap-2 items-center mb-6;
 }
 
 .review-avatar {
@@ -41,7 +41,7 @@ defineProps({
 }
 
 .review-author {
-  @apply flex flex-col;
+  @apply flex flex-col text-center sm:text-left;
 }
 
 .author-name {

@@ -30,7 +30,7 @@ defineEmits(['click'])
 
 <style lang="scss" scoped>
 .carousel-button {
-  @apply bg-gray-800 text-white w-12 h-12 rounded-full flex items-center justify-center
+  @apply bg-gray-800 text-white w-12 h-12 rounded-full hidden sm:flex items-center justify-center
          hover:bg-gray-700 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed
          shrink-0; // Prevent button from shrinking
   

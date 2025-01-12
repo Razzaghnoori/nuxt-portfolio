@@ -27,6 +27,7 @@
         direction="next"
         :disabled="isAtEnd"
         @click="scrollNext"
+        class="hidden sm:block"
       />
     </div>
   </div>
@@ -102,10 +103,14 @@ watch(() => props.itemCount, () => {
 
 .carousel-track {
   @apply w-full overflow-hidden;
+  
+  @screen sm {
+    @apply max-w-3xl; // Add max width for larger screens
+  }
 }
 
 .carousel-wrapper {
-  @apply overflow-x-scroll overflow-y-hidden relative w-full;
+  @apply overflow-x-scroll overflow-y-hidden relative w-full rounded-lg;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
@@ -123,7 +128,15 @@ watch(() => props.itemCount, () => {
 }
 
 .controls {
-  @apply flex items-center justify-center gap-4 mt-4;
+  @apply flex items-center justify-center gap-4 mt-8;
+  
+  @screen sm {
+    @apply gap-8; // Increase gap on larger screens
+  }
+}
+
+.progress-dots {
+  @apply flex justify-center gap-2;
 }
 
 .dot {
