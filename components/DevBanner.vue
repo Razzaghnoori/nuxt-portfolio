@@ -85,7 +85,7 @@ const showLighthouseInstructions = () => {
 }
 
 .message {
-  @apply flex items-center gap-4 flex-wrap justify-center;
+  @apply flex items-center gap-4 flex-wrap justify-center mr-10;
 }
 
 .tech {
@@ -94,7 +94,7 @@ const showLighthouseInstructions = () => {
 }
 
 .divider {
-  @apply text-indigo-400 font-bold;
+  @apply text-indigo-400 font-bold hidden sm:block;
 }
 
 .source-link {
