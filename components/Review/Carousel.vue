@@ -178,10 +178,10 @@ watch(() => props.itemCount, () => {
 }
 
 .dot {
-  @apply w-3 h-3 rounded-full bg-gray-400 transition-all duration-200;
+  @apply w-3 h-3 rounded-full bg-gray-400 transition-all duration-500;
 
   &.active {
-    @apply bg-gray-800 scale-125;
+    @apply bg-gray-800 scale-125 w-8;
   }
 
   &:hover {
