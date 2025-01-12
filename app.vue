@@ -6,11 +6,14 @@
       <ScrollingTags data-direction="right"/>
     </div>
     <Experience />
+    <Review />
     <Education />
   </div>
   <Footer/>
 </template>
 <script setup>
+import Review from '~/components/Review/index.vue'
+
 useHead({
   title: "Mohammad Razzaghnoori",
   htmlAttrs: {

@@ -44,7 +44,8 @@ export default defineNuxtConfig({
   },
   fontawesome: {
     icons: {
-      brands: ['linkedin', 'github', 'instagram', 'twitter', 'stack-overflow'],
+      brands: ["linkedin", "github", "instagram", "twitter", "stack-overflow"],
+      solid: ["faChevronLeft", "faChevronRight"],
     },
   },
 });
