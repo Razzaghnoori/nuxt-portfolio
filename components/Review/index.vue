@@ -2,11 +2,12 @@
   <Section class="reviews-section">
     <div class="container">
       <h2 class="section-title">What People Say</h2>
-      <Carousel :itemCount="reviews.length">
+      <Carousel :itemCount="reviews.length" v-slot="{ transformStyle }">
         <ReviewCard
           v-for="review in reviews"
           :key="review.id"
           :review="review"
+          :transformStyle="transformStyle"
           class="carousel-item"
         />
       </Carousel>

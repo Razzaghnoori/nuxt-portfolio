@@ -1,9 +1,14 @@
 <template>
-  <div class="carousel-container">
+  <div 
+    class="carousel-container"
+    ref="container"
+    @mousemove="handleMouseMove"
+    @mouseleave="handleMouseLeave"
+  >
     <div class="carousel-track">
       <div class="carousel-wrapper" ref="scrollContainer">
         <div class="carousel">
-          <slot></slot>
+          <slot :transformStyle="transformStyle"></slot>
         </div>
       </div>
     </div>
@@ -27,7 +32,6 @@
         direction="next"
         :disabled="isAtEnd"
         @click="scrollNext"
-        class="hidden sm:block"
       />
     </div>
   </div>
@@ -44,8 +48,44 @@ const props = defineProps({
   }
 })
 
+const container = ref(null)
 const scrollContainer = ref(null)
 const currentSlide = ref(0)
+const mousePosition = ref({ x: 0.5, y: 0.5 })
+const isHovering = ref(false)
+
+const transformStyle = computed(() => {
+  if (!isHovering.value) {
+    return {
+      transform: 'perspective(1000px) rotateX(0deg) rotateY(0deg)',
+      transition: 'transform 0.5s ease'
+    }
+  }
+
+  const { x, y } = mousePosition.value
+  const rotateX = (y - 0.5) * -7  // 3.5 degrees of rotation max
+  const rotateY = (x - 0.5) * 7  // 3.5 degrees of rotation max
+
+  return {
+    transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
+    transition: 'transform 0.1s ease'
+  }
+})
+
+const handleMouseMove = (e) => {
+  if (!container.value) return
+
+  const rect = container.value.getBoundingClientRect()
+  const x = (e.clientX - rect.left) / rect.width
+  const y = (e.clientY - rect.top) / rect.height
+  
+  mousePosition.value = { x, y }
+  isHovering.value = true
+}
+
+const handleMouseLeave = () => {
+  isHovering.value = false
+}
 
 // Simplified computed properties
 const isAtStart = computed(() => currentSlide.value === 0)
