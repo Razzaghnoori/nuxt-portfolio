@@ -197,7 +197,7 @@ watch(() => props.itemCount, () => {
 }
 
 .carousel {
-  @apply flex;
+  @apply flex items-center;
 }
 
 .controls {

@@ -50,7 +50,7 @@ const props = defineProps({
 }
 
 .fancy-image {
-  @apply aspect-auto rounded-xl shadow-md fade-in-out;
+  @apply aspect-auto rounded-xl fade-in-out;
   max-height: 75vh;
   object-fit: contain;
   max-width: 95%;
