@@ -11,8 +11,11 @@
     <Education />
   </div>
   <Footer/>
+  <Analytics />
 </template>
 <script setup>
+import { Analytics } from '@vercel/analytics/nuxt';
+
 useHead({
   title: "Mohammad Razzaghnoori",
   htmlAttrs: {
