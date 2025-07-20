@@ -21,7 +21,11 @@ useHead({
   htmlAttrs: {
     lang: "en",
   },
-  link: [
+    link: [
+    {
+      rel: "canonical",
+      href: "https://razzaghnoori.com/",
+    },
     {
       rel: "preload",
       as: "image/webp",
@@ -69,11 +73,19 @@ useHead({
     },
     {
       name: "og:url",
-      content: "https://razzaghnoori.com",
+      content: "https://razzaghnoori.com/",
     },
     {
       name: "og:type",
       content: "website",
+    },
+    {
+      name: "robots",
+      content: "index, follow",
+    },
+    {
+      name: "googlebot",
+      content: "index, follow",
     },
   ],
 });
