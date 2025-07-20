@@ -90,7 +90,7 @@ const showLighthouseInstructions = () => {
 
 .tech {
   @apply font-bold text-white bg-indigo-700 p-3 rounded-md
-         shadow-sm hover:bg-indigo-600 transition-colors;
+         shadow-sm hover:bg-indigo-600 transition-colors text-sm cursor-pointer;
 }
 
 .divider {
