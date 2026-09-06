@@ -1,44 +1,54 @@
-export default defineEventHandler((event) => {
+export default defineEventHandler(() => {
   return [
     {
       id: 1,
-      company: { name: "Holocron", link: "https://holocron.it" },
-      position: "Senior Full Stack Engineer",
-      duration: "Jun 2023-Jun 2024",
-      image: "/images/holocron.webp",
-      tags: [],
+      company: { name: "HolzLand Becker", link: "https://www.holzlandbecker.de/" },
+      position: "Senior Frontend Engineer",
+      duration: "Jan 2025 — Present",
+      image: null,
+      tags: ["Vue 3", "Nuxt 3", "E-commerce", "Performance"],
       description:
-        "I worked as a Senior Full Stack Software Engineer at Holocron in Pisa, Italy, from June 2023 to June 2024. During this time, I developed and launched four websites using diverse technologies like Laravel and Vue.js while collaborating with three different teams. I optimized more than seven microservices in an application to handle large volumes of data, ensuring robust performance and zero failures. I assumed the role of an English speaker and transitioned to communicating in Italian within four months. Additionally, I revitalized and optimized a five-year-old legacy project, exceeding client expectations and ensuring satisfaction.",
+        "I own complex e-commerce work end to end, from reusable Vue and Nuxt foundations to product decisions and delivery. I helped ship an accessory cross-selling experience estimated at ~€1,700 per day in additional profit, reduced the client bundle by 250 KB through a server-side routing and redirect migration, and improved CLS from ~0.30 to below 0.05. I also introduced server-side product caching and mentor junior developers.",
     },
     {
       id: 2,
-      company: { name: "Olab Studio", link: "https://olab-studio.com/" },
-      position: "Full Stack Engineer",
-      duration: "Feb 2022-Jun 2023",
-      image: "/images/olab.webp",
-      tags: [],
+      company: { name: "Holocron", link: "https://holocron.it" },
+      position: "Senior Full Stack Engineer",
+      duration: "Jun 2023 — Jun 2024",
+      image: "/images/holocron.webp",
+      tags: ["Laravel", "Vue.js", "Microservices"],
       description:
-        "At Olab Studio in Nettuno, Italy, I took on the role of a Full Stack Software Engineer from February 2022 to June 2023. I collaborated closely with the client to deliver impactful Django and React projects. By optimizing the website, I boosted conversions and engagement, working alongside a focused three-member team. One of my standout achievements was suggesting sales tactics to owners and developing the upsell page that drove 2,503 conversions in just 13 days—a testament to me being all in and fighting for your success.",
+        "I developed and launched four websites across three teams, optimised more than seven microservices for high-volume data, and modernised a five-year-old legacy project. I also moved from English to communicating in Italian within four months.",
     },
     {
       id: 3,
-      company: { name: "Amerandish", link: "https://amerandish.com/?lang=en" },
-      position: "Software Engineer",
-      duration: "Aug 2018-Aug 2019",
-      image: "/images/amerandish.webp",
-      tags: [],
+      company: { name: "Olab Studio", link: "https://olab-studio.com/" },
+      position: "Full Stack Engineer",
+      duration: "Feb 2022 — Jun 2023",
+      image: "/images/olab.webp",
+      tags: ["Django", "React", "Growth"],
       description:
-        "Prior to that, I contributed as a Software Engineer at Amerandish in Tehran, Iran, from August 2018 to August 2019. I engineered a closed-domain question-answering system by building over 10 RESTful microservices using Python and Flask. Leveraging Telegram's API, I managed and processed over 200 GB of data to develop an Automatic Speech Recognition (ASR) model. Collaborating in a dynamic four-person team, I ensured progress and results were reported directly to the CTO and CEO, fostering clear communication and streamlined results.",
+        "I partnered closely with clients to build Django and React products. One upsell page I proposed and implemented produced 2,503 conversions in 13 days, turning a product insight into a measurable commercial result.",
     },
     {
       id: 4,
       company: { name: "Amerandish", link: "https://amerandish.com/?lang=en" },
-      position: "Machine Learning Engineer",
-      duration: "Jan 2018-Jul 2018",
-      image: "/images/amerandish2.webp",
-      tags: [],
+      position: "Software Engineer",
+      duration: "Aug 2018 — Aug 2019",
+      image: "/images/amerandish.webp",
+      tags: ["Python", "Flask", "NLP"],
       description:
-        "Earlier in my career, I excelled as a Machine Learning Engineer at Amerandish from January 2018 to July 2018. I spearheaded the development of an internal platform that automated model training, testing, and versioning, achieving a staggering 1000x reduction in ML task times. I also built a state-of-the-art Named Entity Recognition (NER) model powered by multilingual BERT. In addition, I designed and deployed two open-domain question-answering systems—one harnessing the power of knowledge graphs and the other integrating advanced information retrieval techniques to deliver precise results.",
+        "I built more than ten RESTful microservices for a closed-domain question-answering system and processed over 200 GB of Telegram data while developing an automatic speech recognition model.",
+    },
+    {
+      id: 5,
+      company: { name: "Amerandish", link: "https://amerandish.com/?lang=en" },
+      position: "Machine Learning Engineer",
+      duration: "Jan 2018 — Jul 2018",
+      image: "/images/amerandish2.webp",
+      tags: ["Python", "BERT", "Machine Learning"],
+      description:
+        "I built an internal platform for model training, testing, and versioning that reduced ML task times by roughly 1,000×, alongside multilingual BERT NER and open-domain question-answering systems.",
     },
   ];
 });
