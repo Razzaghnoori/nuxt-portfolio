@@ -3,20 +3,26 @@
 @tailwind utilities;
 
 :root {
-  --primary: #f08408;
+  --primary: #5eead4;
   --screen-sm: 640px;
   --screen-md: 768px;
   --screen-lg: 1024px;
   --screen-xl: 1280px;
-  --screen-2xl:: 1536px;
+  --screen-2xl: 1536px;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #020617;
 }
 
 body {
-  @apply bg-gray-900 font-sans text-gray-100;
+  @apply bg-slate-950 font-sans text-slate-100;
   max-width: 100vw;
   overflow-x: hidden;
   display: flex;
   justify-content: center;
+  -webkit-font-smoothing: antialiased;
 }
 
 #__nuxt {
@@ -24,4 +30,29 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+}
+
+a {
+  text-underline-offset: 4px;
+}
+
+::selection {
+  background: rgba(94, 234, 212, 0.85);
+  color: #020617;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
